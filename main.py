@@ -1,5 +1,7 @@
 """
 	Here i am going to implement the classes that i have craeted so a far
+	Then  create an array of the instances of the classes
+	Iterate through themm and increase the earnings of the Commissioned Employees using polymmophism
 """
 
 from SalaryEmp import Salaried_Employee
@@ -7,17 +9,13 @@ from CommissionedEmp import Commissioned_Employee
 from Employee import Employee
 from HourlyEmp import Hourly_Employee
 
-emp1 = Salaried_Employee("lukya","bahb","busBD",90000)
-print(emp1.earnings())
+try:
 
-print(emp1.get_last_name())
-emp1.report()
-
-emp2 = Commissioned_Employee("nak","kak","908-984-565",12.09,78.1)
-
-print(emp2.earnings())
-
-emp3 = Hourly_Employee("Alexis","Sanchez","103-908-675",7000,140)
+	emp1 = Salaried_Employee("lukya","bahb","busBD",90000)
+	emp2 = Commissioned_Employee("nak","kak","908-984-565",12.09,78.1)
+	emp3 = Hourly_Employee("Alexis","Sanchez","103-908-675",7000,140)
+except ValueError as e:
+	print("Adjust your working values to get everything right")
 
 Employees = []
 Employees.append(emp1)
