@@ -7,7 +7,9 @@ class Commissioned_Employee(object):
 			raise ValueError("Gross sales cant be less than 0")
 		if rate < 0.0:
 			raise ValueError("rate sales cant be less than 0")
-
+		self._first_name = first_name
+		self._last_name = last_name
+		self._social_security_number = social_security_number
 		self._gross_sales = gross_sales
 		self._rate = rate
 
@@ -25,7 +27,10 @@ class Commissioned_Employee(object):
 	def get_rate(self):
 		return self._rate
 		
-	def earnings():
-		return get_rate() * get_gross()
+	def earnings(self):
+		return self._gross_sales * self._rate
+	def report(self):
+		a = Commissioned_Employee.earnings(self)
+		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nGross Sales: %f\nCommission Rate: %f\nEarns: %d\n"%(self._first_name,self._last_name,self._social_security_number,self._gross_sales,self._rate,a))
 
 
