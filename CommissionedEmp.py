@@ -2,7 +2,7 @@ from Employee import Employee
 class Commissioned_Employee(object):
 	"""docstring for Commissioned_Employee"""
 	def __init__(self,first_name,last_name,social_security_number, gross_sales, rate):
-		super(Commissioned_Employee, self).__init__()
+	
 		if gross_sales < 0.0:
 			raise ValueError("Gross sales cant be less than 0")
 		if rate < 0.0:
@@ -31,6 +31,6 @@ class Commissioned_Employee(object):
 		return self._gross_sales * self._rate
 	def report(self):
 		a = Commissioned_Employee.earnings(self)
-		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nGross Sales: %f\nCommission Rate: %f\nEarns: %d\n"%(self._first_name,self._last_name,self._social_security_number,self._gross_sales,self._rate,a))
+		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nGross Sales: %.3f\nCommission Rate: %.3f\nEarns: %.3f\n"%(self._first_name,self._last_name,self._social_security_number,self._gross_sales,self._rate,a))
 
 
