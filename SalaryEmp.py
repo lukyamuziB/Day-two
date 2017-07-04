@@ -21,5 +21,5 @@ class Salaried_Employee(Employee):
 		return self._weekly_salary*4
 	def report(self):
 		a = Salaried_Employee.earnings(self)
-		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nWeekly Salary: %f\nEarns: %f\n"%(self._first_name,self._last_name,self._social_security_number,self._weekly_salary,a))
+		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nWeekly Salary: %.3f\nEarns: %.3f\n"%(self._first_name,self._last_name,self._social_security_number,self._weekly_salary,a))
 
