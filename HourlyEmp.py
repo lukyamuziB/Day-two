@@ -14,16 +14,16 @@ class Hourly_Employee(Employee):
 		
 
 	def setWage(self, ammount):
-		if wage <= 0:
+		if ammount <= 0:
 			raise ValueError("Wage must be greater than zero")
 		self._wage = ammount
-	def get_wage(self, ammount):
+	def get_wage(self):
 		return self._wage
 
 	def set_hours_worked(self, hrs):
-		if((hours < 0.0) or (hours > 168.0)):
+		if((hrs < 0.0) or (hrs > 168.0)):
 			raise ValueError("Hours worked must be between 0 and 168")
-		this._hours= hrs
+		self._hours = hrs
 
 	def get_hours_worked(self):
 		return self._hours
@@ -35,4 +35,4 @@ class Hourly_Employee(Employee):
 		return (self._hours * self._wage) + ((self._hours-40) * 3.5)
 	def report(self):
 		earns = Hourly_Employee.earnings(self)
-		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nWage: %f\nHours Worked: %f\nEarns: %f\n"%(self._first_name,self._last_name,self._social_security_number,self._wage,self._hours,earns))
+		print("First Name: %s\nLast Name: %s\nSocial Number: %s\nWage: %.3f\nHours Worked: %.3f\nEarns: %.3f\n"%(self._first_name,self._last_name,self._social_security_number,self._wage,self._hours,earns))
